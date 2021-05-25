@@ -68,7 +68,7 @@ def _decode_5104(data):
             text_size = struct.unpack(
                 '<h', data[start_byte:start_byte + 2])[0]
             start_byte += 2
-            text.append(data[start_byte:start_byte + text_size].decode('utf8'))
+            text.append(data[start_byte:start_byte + text_size].decode('ansi'))
             start_byte += text_size
             start_byte += 6
         elif tag == b'$u':
